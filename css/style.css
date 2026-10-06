@@ -1,0 +1,123 @@
+/* =========================================
+   MYSTERYBOX - GLOBAL STYLES
+   ========================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ---------- Color Palette ---------- */
+
+:root {
+    --burgundy: #650019;
+    --wine: #8B1538;
+    --dark-burgundy: #3D0715;
+
+    --cream: #F5E9D8;
+    --ivory: #FCF8F1;
+    --dusty-rose: #D9A0A8;
+
+    --brown: #2B1A1E;
+    --dark: #24191C;
+    --white: #FFFFFF;
+
+    --border: #E4D3C8;
+}
+
+
+/* ---------- General ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background-color: var(--cream);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn-mystery {
+    background-color: var(--burgundy);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-mystery:hover {
+    background-color: var(--wine);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Section Spacing ---------- */
+
+.section-padding {
+    padding: 80px 0;
+}
+
+
+/* ---------- Section Heading ---------- */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #766b6d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Card Selection styling for Build Box page */
+.custom-select-card {
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.custom-select-card:hover {
+    border-color: var(--dusty-rose);
+    transform: translateY(-2px);
+}
+
+.btn-check:checked + .custom-select-card {
+    border-color: var(--burgundy);
+    background-color: #FAF0F2;
+    box-shadow: 0 8px 20px rgba(101, 0, 25, 0.12);
+}

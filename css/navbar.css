@@ -1,0 +1,90 @@
+/* =========================================
+   MYSTERYBOX - NAVBAR
+   ========================================= */
+
+.mystery-navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.navbar-brand i {
+    color: var(--dark-pink);
+    margin-right: 6px;
+}
+
+.navbar-brand:hover {
+    color: var(--dark-pink);
+}
+
+
+/* Navigation links */
+
+.mystery-navbar .nav-link {
+    color: var(--dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 7px;
+    transition: 0.3s ease;
+}
+
+.mystery-navbar .nav-link:hover,
+.mystery-navbar .nav-link.active {
+    color: var(--dark-pink);
+}
+
+
+/* Right side icons */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-icon {
+    color: var(--dark);
+    font-size: 1.15rem;
+    transition: 0.3s ease;
+}
+
+.nav-icon:hover {
+    color: var(--dark-pink);
+}
+
+
+/* Login button */
+
+.login-btn {
+    border: 1px solid var(--dark-pink);
+    color: var(--dark-pink);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--dark-pink);
+    color: var(--white);
+}
+
+
+/* Mobile */
+
+@media (max-width: 991px) {
+
+    .nav-icons {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+}

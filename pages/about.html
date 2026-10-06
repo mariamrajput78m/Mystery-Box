@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build My Box | MysteryBox</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS (Stepping back one folder) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3" style="background-color: var(--cream); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" style="color: var(--burgundy); font-family: 'Playfair Display', serif;" href="../index.html">
+                MysteryBox
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="mystery-box.html">Explore Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold active" href="build-box.html" style="color: var(--burgundy);">Build Box</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="btn btn-outline-dark rounded-pill px-3 position-relative">
+                            <i class="bi bi-bag"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO SLUG -->
+    <section class="py-5 text-center" style="background-color: var(--ivory); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="hero-label justify-content-center mb-2">
+                <span></span>
+                STEP-BY-STEP CUSTOMIZATION
+                <span></span>
+            </div>
+            <h1 class="display-5 fw-bold" style="color: var(--dark);">Build Your Custom Box</h1>
+            <p class="text-muted mx-auto" style="max-width: 550px;">
+                Select your budget size, pick your signature vibe, and customize your mystery extras below.
+            </p>
+        </div>
+    </section>
+
+    <!-- BUILD FORM SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <form action="cart.html" method="GET">
+                <div class="row g-4">
+
+                    <!-- LEFT COLUMN: SELECTION STEPS -->
+                    <div class="col-lg-8">
+
+                        <!-- STEP 1: CHOOSE BOX SIZE -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">1</span>
+                                <h3 class="h4 m-0 fw-bold">Select Box Size & Budget</h3>
+                            </div>
+
+                            <div class="row g-3">
+                                <!-- Size 1 -->
+                                <div class="col-md-6">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-mini" autocomplete="off" checked>
+                                    <label class="card custom-select-card h-100 p-4" for="size-mini">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="fw-bold fs-5">Petite Box</span>
+                                            <span class="fs-5 fw-bold" style="color: var(--burgundy);">$29</span>
+                                        </div>
+                                        <p class="small text-muted mb-2">2 to 3 curated surprise items.</p>
+                                        <span class="badge bg-light text-dark align-self-start border">Great starter</span>
+                                    </label>
+                                </div>
+
+                                <!-- Size 2 -->
+                                <div class="col-md-6">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-classic" autocomplete="off">
+                                    <label class="card custom-select-card h-100 p-4" for="size-classic">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="fw-bold fs-5">Classic Box</span>
+                                            <span class="fs-5 fw-bold" style="color: var(--burgundy);">$49</span>
+                                        </div>
+                                        <p class="small text-muted mb-2">4 to 5 curated surprise items.</p>
+                                        <span class="badge text-white align-self-start" style="background-color: var(--burgundy);">Most Popular</span>
+                                    </label>
+                                </div>
+
+                                <!-- Size 3 -->
+                                <div class="col-md-6">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-deluxe" autocomplete="off">
+                                    <label class="card custom-select-card h-100 p-4" for="size-deluxe">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="fw-bold fs-5">Deluxe Box</span>
+                                            <span class="fs-5 fw-bold" style="color: var(--burgundy);">$79</span>
+                                        </div>
+                                        <p class="small text-muted mb-2">6 to 8 premium luxury surprises.</p>
+                                        <span class="badge bg-light text-dark align-self-start border">High Value</span>
+                                    </label>
+                                </div>
+
+                                <!-- Size 4 -->
+                                <div class="col-md-6">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-vip" autocomplete="off">
+                                    <label class="card custom-select-card h-100 p-4" for="size-vip">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="fw-bold fs-5">VIP Experience</span>
+                                            <span class="fs-5 fw-bold" style="color: var(--burgundy);">$119</span>
+                                        </div>
+                                        <p class="small text-muted mb-2">10+ top-tier exclusive items + priority shipping.</p>
+                                        <span class="badge bg-warning text-dark align-self-start">Ultimate Treat</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: CHOOSE VIBE -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">2</span>
+                                <h3 class="h4 m-0 fw-bold">Pick Your Vibe</h3>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="radio" class="btn-check" name="vibe" id="vibe-pink" autocomplete="off" checked>
+                                    <label class="card custom-select-card text-center p-3 h-100" for="vibe-pink">
+                                        <div class="fs-2 mb-2">🎀</div>
+                                        <h6 class="fw-bold mb-1">Pink Dream</h6>
+                                        <p class="small text-muted mb-0">Pastels, aesthetic accessories, cute decor.</p>
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input type="radio" class="btn-check" name="vibe" id="vibe-midnight" autocomplete="off">
+                                    <label class="card custom-select-card text-center p-3 h-100" for="vibe-midnight">
+                                        <div class="fs-2 mb-2">🌙</div>
+                                        <h6 class="fw-bold mb-1">Midnight Luxe</h6>
+                                        <p class="small text-muted mb-0">Sleek dark items, candles, evening chill.</p>
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input type="radio" class="btn-check" name="vibe" id="vibe-cozy" autocomplete="off">
+                                    <label class="card custom-select-card text-center p-3 h-100" for="vibe-cozy">
+                                        <div class="fs-2 mb-2">☕</div>
+                                        <h6 class="fw-bold mb-1">Cozy Warmth</h6>
+                                        <p class="small text-muted mb-0">Mugs, tea, self-care, fluffy essentials.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: EXTRAS & ADD-ONS -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">3</span>
+                                <h3 class="h4 m-0 fw-bold">Optional Extras</h3>
+                            </div>
+
+                            <div class="card p-3 border-0 bg-white shadow-sm">
+                                <div class="form-check py-2 border-bottom">
+                                    <input class="form-check-input" type="checkbox" id="extra1">
+                                    <label class="form-check-label d-flex justify-content-between" for="extra1">
+                                        <span>🎁 Gift Wrap & Hand-written Note</span>
+                                        <span class="fw-bold text-muted">+$5.00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check py-2 border-bottom">
+                                    <input class="form-check-input" type="checkbox" id="extra2">
+                                    <label class="form-check-label d-flex justify-content-between" for="extra2">
+                                        <span>✦ Guaranteed Birthday Extra</span>
+                                        <span class="fw-bold text-muted">+$8.00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check py-2 pt-2">
+                                    <input class="form-check-input" type="checkbox" id="extra3">
+                                    <label class="form-check-label d-flex justify-content-between" for="extra3">
+                                        <span>🚀 Rush Priority Dispatch</span>
+                                        <span class="fw-bold text-muted">+$10.00</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT COLUMN: SUMMARY STICKY BOX -->
+                    <div class="col-lg-4">
+                        <div class="card p-4 sticky-top border-0 shadow-sm" style="top: 100px; background-color: var(--ivory);">
+                            <h4 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Your Mystery Summary</h4>
+                            
+                            <hr class="my-3" style="border-color: var(--border);">
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Selected Size:</span>
+                                <strong id="summary-size">Petite Box</strong>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Chosen Vibe:</span>
+                                <strong id="summary-vibe">Pink Dream</strong>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Est. Item Value:</span>
+                                <strong class="text-success">$50+ value</strong>
+                            </div>
+
+                            <hr class="my-3" style="border-color: var(--border);">
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fs-5 fw-bold">Total:</span>
+                                <span class="fs-4 fw-bold" style="color: var(--burgundy);">$29.00</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-mystery w-100 py-3 mb-2">
+                                Add Custom Box to Cart <i class="bi bi-arrow-right ms-1"></i>
+                            </button>
+
+                            <p class="text-center small text-muted mb-0">
+                                <i class="bi bi-shield-check me-1"></i> 100% Satisfaction Guarantee
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

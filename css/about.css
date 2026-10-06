@@ -1,0 +1,353 @@
+/* =====================================
+   ABOUT PAGE
+===================================== */
+
+.about-hero {
+    background-color: var(--ivory);
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0 80px;
+    overflow: hidden;
+}
+
+
+/* LABEL */
+
+.about-label {
+    color: var(--burgundy);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.about-label span {
+    width: 45px;
+    height: 1px;
+    background-color: var(--burgundy);
+}
+
+
+/* MAIN TITLE */
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 6vw, 85px);
+    line-height: 0.98;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+
+.about-title em {
+    color: var(--burgundy);
+    font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.about-description {
+    max-width: 560px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.secondary-text {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* BUTTONS */
+
+.about-buttons {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.about-main-btn {
+    background-color: var(--burgundy);
+    color: white;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about-main-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(128, 0, 32, 0.15);
+}
+
+.about-text-link {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-text-link:hover {
+    color: var(--burgundy);
+}
+
+
+/* =====================================
+   RIGHT SIDE VISUAL
+===================================== */
+
+.about-visual {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* MAIN BOX */
+
+.about-box {
+    position: relative;
+    width: 280px;
+    height: 260px;
+    transform: rotate(-4deg);
+    filter: drop-shadow(0 30px 30px rgba(80, 40, 30, 0.16));
+}
+
+.about-box-body {
+    width: 250px;
+    height: 190px;
+    background-color: var(--burgundy);
+    border-radius: 8px 8px 25px 25px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+.about-box-lid {
+    position: absolute;
+    width: 280px;
+    height: 62px;
+    background-color: #97052c;
+    top: 20px;
+    left: 0;
+    border-radius: 12px;
+    z-index: 3;
+}
+
+.about-ribbon-vertical {
+    position: absolute;
+    width: 43px;
+    height: 190px;
+    background-color: #fff5ee;
+    left: 104px;
+    top: 0;
+}
+
+.about-ribbon-horizontal {
+    position: absolute;
+    width: 280px;
+    height: 28px;
+    background-color: #fff5ee;
+    top: 37px;
+    left: 0;
+    z-index: 4;
+}
+
+
+/* FLOATING CARDS */
+
+.about-floating-card {
+    position: absolute;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 18px 40px rgba(65, 38, 30, 0.12);
+    z-index: 6;
+}
+
+.about-floating-card small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #999;
+}
+
+.about-floating-card strong {
+    display: block;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.about-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8e9e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--burgundy);
+}
+
+.card-one {
+    top: 45px;
+    left: 20px;
+    transform: rotate(-4deg);
+}
+
+.card-two {
+    bottom: 25px;
+    right: 5px;
+    transform: rotate(4deg);
+}
+
+
+/* DECORATIVE STARS */
+
+.about-star {
+    position: absolute;
+    color: var(--burgundy);
+}
+
+.star-a {
+    font-size: 31px;
+    right: 30px;
+    top: 90px;
+}
+
+.star-b {
+    font-size: 38px;
+    left: 50px;
+    bottom: 75px;
+}
+
+.star-c {
+    font-size: 19px;
+    right: 90px;
+    bottom: 150px;
+}
+
+
+/* SMALL TEXT */
+
+.about-small-word {
+    position: absolute;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #b49c90;
+}
+
+.word-one {
+    right: 20px;
+    top: 30px;
+}
+
+.word-two {
+    left: 20px;
+    bottom: 15px;
+}
+
+
+/* =====================================
+   BRAND STRIP
+===================================== */
+
+.about-brand-strip {
+    background-color: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand-point {
+    padding: 28px 20px;
+}
+
+.brand-point:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.brand-point span {
+    font-family: 'Playfair Display', serif;
+    color: var(--burgundy);
+    font-size: 25px;
+}
+
+.brand-point p {
+    display: inline;
+    margin-left: 12px;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .about-hero {
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .about-label {
+        justify-content: center;
+    }
+
+    .about-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-buttons {
+        justify-content: center;
+    }
+
+    .about-visual {
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-title {
+        font-size: 50px;
+    }
+
+    .about-visual {
+        min-height: 420px;
+        transform: scale(0.9);
+    }
+
+    .brand-point:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+}

@@ -378,3 +378,24 @@
     object-position: center;
     background-color: var(--cream);
 }
+
+/* Our Story image: smaller, not cropped */
+.story-section .story-img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 460px;
+    margin: 0 auto;
+}
+
+/* Our Story text: bigger */
+.story-section .story-text .section-heading {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-section .story-text p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}

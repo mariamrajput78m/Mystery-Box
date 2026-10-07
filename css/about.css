@@ -370,3 +370,11 @@
         font-size: 2rem;
     }
 }
+
+.about-hero .row img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--cream);
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Boxes | MysteryBox</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/mystery-box.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3"
+        style="background-color: var(--cream); border-bottom:1px solid var(--border);">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-4" href="../index.html"
+                style="color: var(--burgundy); font-family:'Playfair Display',serif;">
+                MysteryBox
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold active" href="mystery-box.html"
+                            style="color:var(--burgundy);">Explore Boxes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="build-box.html">Build Box</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="cart.html" class="btn btn-outline-dark rounded-pill px-3 position-relative"
+                            aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                1
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- =====================================
+         EXPLORE HERO
+    ====================================== -->
+    <section class="explore-hero">
+        <div class="container text-center">
+
+            <div class="section-label">
+                <span></span>
+                EXPLORE MYSTERY BOXES
+                <span></span>
+            </div>
+
+            <h1 class="explore-title">
+                Find Your Perfect
+                <em>Surprise.</em>
+            </h1>
+
+            <p class="explore-subtitle mx-auto">
+                Pick a vibe, pick a size, and we'll fill the box.
+                You'll know the theme. You won't know what's inside.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================
+         FILTER BAR
+    ====================================== -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-inner">
+
+                <div class="filter-pills" role="group" aria-label="Filter boxes by vibe">
+                    <button type="button" class="filter-pill active" data-filter="all">All Vibes</button>
+                    <button type="button" class="filter-pill" data-filter="pink">🎀 Pink Dream</button>
+                    <button type="button" class="filter-pill" data-filter="midnight">🌙 Midnight Luxe</button>
+                    <button type="button" class="filter-pill" data-filter="cozy">☕ Cozy Warmth</button>
+                </div>
+
+                <div class="sort-wrap">
+                    <label for="sortSelect" class="sort-label">Sort by</label>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =====================================
+         PRODUCT GRID
+    ====================================== -->
+    <section class="boxes-section">
+        <div class="container">
+
+            <p class="results-count" id="resultsCount" aria-live="polite">Showing 6 boxes</p>
+
+            <div class="row g-4" id="boxGrid">
+
+                <!-- CARD 1 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="pink" data-price="29" data-order="1">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-pink-petite.jpg" alt="Pink Dream Petite Box with pastel wrapping and ribbon"
+                                loading="lazy">
+                            <span class="box-badge">Great starter</span>
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">🎀 Pink Dream</span>
+                            <h3 class="box-name">Pink Dream Petite</h3>
+                            <p class="box-desc">Pastel accessories and cute little extras, a sweet first surprise.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 2 to 3 items</li>
+                                <li><i class="bi bi-stars"></i> $50+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$29</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="pink" data-price="49" data-order="2">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-pink-classic.jpg" alt="Pink Dream Classic Box with beauty and accessory items"
+                                loading="lazy">
+                            <span class="box-badge badge-popular">Most Popular</span>
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">🎀 Pink Dream</span>
+                            <h3 class="box-name">Pink Dream Classic</h3>
+                            <p class="box-desc">Makeup, skincare and aesthetic decor, all in soft pink tones.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 4 to 5 items</li>
+                                <li><i class="bi bi-stars"></i> $80+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$49</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="midnight" data-price="49" data-order="3">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-midnight-classic.jpg" alt="Midnight Luxe Classic Box with dark packaging and a candle"
+                                loading="lazy">
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">🌙 Midnight Luxe</span>
+                            <h3 class="box-name">Midnight Luxe Classic</h3>
+                            <p class="box-desc">Candles, dark-toned self-care and sleek pieces for slow evenings.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 4 to 5 items</li>
+                                <li><i class="bi bi-stars"></i> $80+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$49</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="midnight" data-price="79" data-order="4">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-midnight-deluxe.jpg" alt="Midnight Luxe Deluxe Box with premium items"
+                                loading="lazy">
+                            <span class="box-badge">High Value</span>
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">🌙 Midnight Luxe</span>
+                            <h3 class="box-name">Midnight Luxe Deluxe</h3>
+                            <p class="box-desc">Premium luxury surprises with a dark, elegant finish.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 6 to 8 items</li>
+                                <li><i class="bi bi-stars"></i> $130+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$79</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="cozy" data-price="29" data-order="5">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-cozy-petite.jpg" alt="Cozy Warmth Petite Box with a mug and tea"
+                                loading="lazy">
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">☕ Cozy Warmth</span>
+                            <h3 class="box-name">Cozy Warmth Petite</h3>
+                            <p class="box-desc">A mug, a little tea and something fluffy to settle in with.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 2 to 3 items</li>
+                                <li><i class="bi bi-stars"></i> $50+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$29</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="col-md-6 col-lg-4 box-item" data-vibe="cozy" data-price="119" data-order="6">
+                    <article class="box-card">
+                        <div class="box-media">
+                            <img src="../images/box-cozy-vip.jpg" alt="Cozy Warmth VIP Experience box with premium self-care items"
+                                loading="lazy">
+                            <span class="box-badge badge-vip">Ultimate Treat</span>
+                        </div>
+                        <div class="box-body">
+                            <span class="box-vibe">☕ Cozy Warmth</span>
+                            <h3 class="box-name">Cozy Warmth VIP</h3>
+                            <p class="box-desc">Top-tier self-care and comfort pieces, shipped with priority.</p>
+                            <ul class="box-meta">
+                                <li><i class="bi bi-gift"></i> 10+ items</li>
+                                <li><i class="bi bi-stars"></i> $200+ value</li>
+                            </ul>
+                            <div class="box-footer">
+                                <span class="box-price">$119</span>
+                                <div class="box-actions">
+                                    <a href="build-box.html" class="btn-box-outline">Customize</a>
+                                    <a href="cart.html" class="btn-box-solid">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <!-- Shown when a filter returns nothing -->
+            <p class="empty-state d-none" id="emptyState">
+                No boxes match this vibe yet. Try another one or
+                <a href="build-box.html">build your own box</a>.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================
+         SIZE GUIDE
+    ====================================== -->
+    <section class="size-section">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-heading">Which Size Is Right For You?</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-6 col-lg-3">
+                    <div class="size-card">
+                        <h5>Petite</h5>
+                        <div class="size-price">$29</div>
+                        <p>2 to 3 items</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="size-card featured">
+                        <span class="size-tag">Most Popular</span>
+                        <h5>Classic</h5>
+                        <div class="size-price">$49</div>
+                        <p>4 to 5 items</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="size-card">
+                        <h5>Deluxe</h5>
+                        <div class="size-price">$79</div>
+                        <p>6 to 8 items</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="size-card">
+                        <h5>VIP</h5>
+                        <div class="size-price">$119</div>
+                        <p>10+ items and priority shipping</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================
+         BUILD CTA
+    ====================================== -->
+    <section class="explore-cta">
+        <div class="container">
+            <div class="cta-panel">
+                <div>
+                    <h2>Want it your way?</h2>
+                    <p>Choose your own size, vibe and extras like gift wrap and rush dispatch.</p>
+                </div>
+                <a href="build-box.html" class="btn-cta-light">
+                    Build My Box <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+    <footer class="footer-section">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <h3 class="footer-logo">MysteryBox</h3>
+                    <p>
+                        Personalized surprise shopping designed
+                        to make every unboxing exciting.
+                    </p>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mystery-box.html">Explore Boxes</a></li>
+                        <li><a href="build-box.html">Build Box</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+                <p class="mb-0">© 2026 MysteryBox. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Filter + sort -->
+    <script>
+        (function () {
+            var grid = document.getElementById('boxGrid');
+            var items = Array.prototype.slice.call(grid.querySelectorAll('.box-item'));
+            var pills = document.querySelectorAll('.filter-pill');
+            var sortSelect = document.getElementById('sortSelect');
+            var count = document.getElementById('resultsCount');
+            var empty = document.getElementById('emptyState');
+            var currentFilter = 'all';
+
+            function render() {
+                var visible = 0;
+                items.forEach(function (item) {
+                    var show = currentFilter === 'all' || item.dataset.vibe === currentFilter;
+                    item.classList.toggle('d-none', !show);
+                    if (show) visible++;
+                });
+                count.textContent = 'Showing ' + visible + (visible === 1 ? ' box' : ' boxes');
+                empty.classList.toggle('d-none', visible !== 0);
+            }
+
+            function sortItems() {
+                var mode = sortSelect.value;
+                var sorted = items.slice().sort(function (a, b) {
+                    if (mode === 'low') return a.dataset.price - b.dataset.price;
+                    if (mode === 'high') return b.dataset.price - a.dataset.price;
+                    return a.dataset.order - b.dataset.order;
+                });
+                sorted.forEach(function (item) { grid.appendChild(item); });
+            }
+
+            pills.forEach(function (pill) {
+                pill.addEventListener('click', function () {
+                    pills.forEach(function (p) { p.classList.remove('active'); });
+                    pill.classList.add('active');
+                    currentFilter = pill.dataset.filter;
+                    render();
+                });
+            });
+
+            sortSelect.addEventListener('change', sortItems);
+        })();
+    </script>
+
+</body>
+
+</html>

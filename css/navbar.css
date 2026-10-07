@@ -88,3 +88,17 @@
     }
 
 }
+
+
+.login-link {
+    color: var(--burgundy) !important;
+}
+
+.login-link i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.login-link:hover {
+    color: #70001d !important;
+}

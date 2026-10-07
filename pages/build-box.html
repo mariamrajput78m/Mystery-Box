@@ -23,30 +23,71 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top py-3" style="background-color: var(--cream); border-bottom: 1px solid var(--border);">
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3"
+        style="background-color: var(--cream); border-bottom:1px solid var(--border);">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-4" style="color: var(--burgundy); font-family: 'Playfair Display', serif;" href="../index.html">
+
+            <a class="navbar-brand fw-bold fs-4" href="../index.html"
+                style="color: var(--burgundy); font-family:'Playfair Display',serif;">
                 MysteryBox
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto align-items-center gap-3">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="mystery-box.html">Explore Boxes</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold active" href="build-box.html" style="color: var(--burgundy);">Build Box</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+
                     <li class="nav-item">
-                        <a href="cart.html" class="btn btn-outline-dark rounded-pill px-3 position-relative">
-                            <i class="bi bi-bag"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
+                        <a class="nav-link fw-semibold" href="../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="explore.html">Explore Boxes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="build-box.html">Build Box</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold active" href="about.html"
+                            style="color:var(--burgundy);">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Login -->
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link fw-semibold login-link">
+                            <i class="bi bi-person"></i>
+                            Login
                         </a>
                     </li>
+
+                    <!-- Cart -->
+                    <li class="nav-item">
+                        <a href="cart.html" class="btn btn-outline-dark rounded-pill px-3 position-relative"
+                            aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                1
+                            </span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
+
         </div>
     </nav>
 

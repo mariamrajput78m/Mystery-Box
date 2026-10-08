@@ -22,47 +22,47 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg sticky-top site-navbar">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container">
 
-        <a class="navbar-brand" href="../index.html" aria-label="MysteryBox home">
-            <svg class="brand-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect class="logo-body" x="7" y="18" width="26" height="17" rx="3"/>
-                <rect class="logo-lid" x="4" y="13" width="32" height="7" rx="2.5"/>
-                <rect class="logo-ribbon" x="18" y="13" width="4" height="22"/>
-                <path class="logo-bow" d="M20 13 C14 4, 7 8, 12 12 C14 13.5, 18 13, 20 13 Z"/>
-                <path class="logo-bow" d="M20 13 C26 4, 33 8, 28 12 C26 13.5, 22 13, 20 13 Z"/>
-                <path class="logo-spark" d="M33 3 l1.2 2.8 L37 7 l-2.8 1.2 L33 11 l-1.2-2.8 L29 7 l2.8-1.2z"/>
-            </svg>
-            <span class="brand-text">Mystery<em>Box</em></span>
-        </a>
+            <a class="navbar-brand" href="../index.html" aria-label="MysteryBox home">
+                <svg class="brand-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect class="logo-body" x="7" y="18" width="26" height="17" rx="3" />
+                    <rect class="logo-lid" x="4" y="13" width="32" height="7" rx="2.5" />
+                    <rect class="logo-ribbon" x="18" y="13" width="4" height="22" />
+                    <path class="logo-bow" d="M20 13 C14 4, 7 8, 12 12 C14 13.5, 18 13, 20 13 Z" />
+                    <path class="logo-bow" d="M20 13 C26 4, 33 8, 28 12 C26 13.5, 22 13, 20 13 Z" />
+                    <path class="logo-spark" d="M33 3 l1.2 2.8 L37 7 l-2.8 1.2 L33 11 l-1.2-2.8 L29 7 l2.8-1.2z" />
+                </svg>
+                <span class="brand-text">Mystery<em>Box</em></span>
+            </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
-            aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
-    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="explore.html">Explore Boxes</a></li>
-    <li class="nav-item"><a class="nav-link" href="build-box.html">Build Box</a></li>
-    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    <li class="nav-item">
-        <a href="login.html" class="nav-link login-link"><i class="bi bi-person"></i> Login</a>
-    </li>
-    <li class="nav-item">
-        <a href="cart.html" class="nav-cart position-relative" aria-label="Cart">
-            <i class="bi bi-bag"></i>
-            <span class="cart-badge">1</span>
-        </a>
-    </li>
-</ul>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="build-box.html">Build Box</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link login-link"><i class="bi bi-person"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-cart position-relative" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-
-    </div>
-</nav>
+    </nav>
 
     <!-- HEADER / HERO SLUG -->
     <section class="py-5 text-center" style="background-color: var(--ivory); border-bottom: 1px solid var(--border);">
@@ -91,40 +91,46 @@
                         <!-- STEP 1: CHOOSE BOX SIZE -->
                         <div class="mb-5">
                             <div class="d-flex align-items-center gap-2 mb-3">
-                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">1</span>
+                                <span class="badge rounded-circle p-2"
+                                    style="background-color: var(--burgundy); width: 32px; height: 32px;">1</span>
                                 <h3 class="h4 m-0 fw-bold">Select Box Size & Budget</h3>
                             </div>
 
                             <div class="row g-3">
                                 <!-- Size 1 -->
                                 <div class="col-md-6">
-                                    <input type="radio" class="btn-check" name="box_size" id="size-mini" autocomplete="off" checked>
+                                    <input type="radio" class="btn-check" name="box_size" id="size-mini"
+                                        autocomplete="off" checked>
                                     <label class="card custom-select-card h-100 p-4" for="size-mini">
                                         <div class="d-flex justify-content-between align-items-start mb-2">
                                             <span class="fw-bold fs-5">Petite Box</span>
                                             <span class="fs-5 fw-bold" style="color: var(--burgundy);">$29</span>
                                         </div>
                                         <p class="small text-muted mb-2">2 to 3 curated surprise items.</p>
-                                        <span class="badge bg-light text-dark align-self-start border">Great starter</span>
+                                        <span class="badge bg-light text-dark align-self-start border">Great
+                                            starter</span>
                                     </label>
                                 </div>
 
                                 <!-- Size 2 -->
                                 <div class="col-md-6">
-                                    <input type="radio" class="btn-check" name="box_size" id="size-classic" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-classic"
+                                        autocomplete="off">
                                     <label class="card custom-select-card h-100 p-4" for="size-classic">
                                         <div class="d-flex justify-content-between align-items-start mb-2">
                                             <span class="fw-bold fs-5">Classic Box</span>
                                             <span class="fs-5 fw-bold" style="color: var(--burgundy);">$49</span>
                                         </div>
                                         <p class="small text-muted mb-2">4 to 5 curated surprise items.</p>
-                                        <span class="badge text-white align-self-start" style="background-color: var(--burgundy);">Most Popular</span>
+                                        <span class="badge text-white align-self-start"
+                                            style="background-color: var(--burgundy);">Most Popular</span>
                                     </label>
                                 </div>
 
                                 <!-- Size 3 -->
                                 <div class="col-md-6">
-                                    <input type="radio" class="btn-check" name="box_size" id="size-deluxe" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-deluxe"
+                                        autocomplete="off">
                                     <label class="card custom-select-card h-100 p-4" for="size-deluxe">
                                         <div class="d-flex justify-content-between align-items-start mb-2">
                                             <span class="fw-bold fs-5">Deluxe Box</span>
@@ -137,13 +143,15 @@
 
                                 <!-- Size 4 -->
                                 <div class="col-md-6">
-                                    <input type="radio" class="btn-check" name="box_size" id="size-vip" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="box_size" id="size-vip"
+                                        autocomplete="off">
                                     <label class="card custom-select-card h-100 p-4" for="size-vip">
                                         <div class="d-flex justify-content-between align-items-start mb-2">
                                             <span class="fw-bold fs-5">VIP Experience</span>
                                             <span class="fs-5 fw-bold" style="color: var(--burgundy);">$119</span>
                                         </div>
-                                        <p class="small text-muted mb-2">10+ top-tier exclusive items + priority shipping.</p>
+                                        <p class="small text-muted mb-2">10+ top-tier exclusive items + priority
+                                            shipping.</p>
                                         <span class="badge bg-warning text-dark align-self-start">Ultimate Treat</span>
                                     </label>
                                 </div>
@@ -153,13 +161,15 @@
                         <!-- STEP 2: CHOOSE VIBE -->
                         <div class="mb-5">
                             <div class="d-flex align-items-center gap-2 mb-3">
-                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">2</span>
+                                <span class="badge rounded-circle p-2"
+                                    style="background-color: var(--burgundy); width: 32px; height: 32px;">2</span>
                                 <h3 class="h4 m-0 fw-bold">Pick Your Vibe</h3>
                             </div>
 
                             <div class="row g-3">
                                 <div class="col-md-4">
-                                    <input type="radio" class="btn-check" name="vibe" id="vibe-pink" autocomplete="off" checked>
+                                    <input type="radio" class="btn-check" name="vibe" id="vibe-pink" autocomplete="off"
+                                        checked>
                                     <label class="card custom-select-card text-center p-3 h-100" for="vibe-pink">
                                         <div class="fs-2 mb-2">🎀</div>
                                         <h6 class="fw-bold mb-1">Pink Dream</h6>
@@ -168,7 +178,8 @@
                                 </div>
 
                                 <div class="col-md-4">
-                                    <input type="radio" class="btn-check" name="vibe" id="vibe-midnight" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="vibe" id="vibe-midnight"
+                                        autocomplete="off">
                                     <label class="card custom-select-card text-center p-3 h-100" for="vibe-midnight">
                                         <div class="fs-2 mb-2">🌙</div>
                                         <h6 class="fw-bold mb-1">Midnight Luxe</h6>
@@ -190,7 +201,8 @@
                         <!-- STEP 3: EXTRAS & ADD-ONS -->
                         <div class="mb-4">
                             <div class="d-flex align-items-center gap-2 mb-3">
-                                <span class="badge rounded-circle p-2" style="background-color: var(--burgundy); width: 32px; height: 32px;">3</span>
+                                <span class="badge rounded-circle p-2"
+                                    style="background-color: var(--burgundy); width: 32px; height: 32px;">3</span>
                                 <h3 class="h4 m-0 fw-bold">Optional Extras</h3>
                             </div>
 
@@ -223,9 +235,11 @@
 
                     <!-- RIGHT COLUMN: SUMMARY STICKY BOX -->
                     <div class="col-lg-4">
-                        <div class="card p-4 sticky-top border-0 shadow-sm" style="top: 100px; background-color: var(--ivory);">
-                            <h4 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Your Mystery Summary</h4>
-                            
+                        <div class="card p-4 sticky-top border-0 shadow-sm"
+                            style="top: 100px; background-color: var(--ivory);">
+                            <h4 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Your Mystery
+                                Summary</h4>
+
                             <hr class="my-3" style="border-color: var(--border);">
 
                             <div class="d-flex justify-content-between mb-2">
@@ -266,120 +280,120 @@
     </section>
 
 
-            <!-- =====================================
+    <!-- =====================================
          FOOTER
     ====================================== -->
 
-        <footer class="footer-section">
+    <footer class="footer-section">
 
-            <div class="container">
+        <div class="container">
 
-                <div class="row gy-4">
+            <div class="row gy-4">
 
-                    <div class="col-lg-4">
+                <div class="col-lg-4">
 
-                        <h3 class="footer-logo">
-                            MysteryBox
-                        </h3>
+                    <h3 class="footer-logo">
+                        MysteryBox
+                    </h3>
 
-                        <p>
-                            Personalized surprise shopping designed
-                            to make every unboxing exciting.
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-2">
-
-                        <h5>Shop</h5>
-
-                        <ul class="list-unstyled">
-
-                            <li>
-                                <a href="mystery-box.html">
-                                    Explore Boxes
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="build-box.html">
-                                    Build Box
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="cart.html">
-                                    Cart
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-2">
-
-                        <h5>Company</h5>
-
-                        <ul class="list-unstyled">
-
-                            <li>
-                                <a href="about.html">
-                                    About
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="contact.html">
-                                    Contact
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <h5>Follow Us</h5>
-
-                        <div class="d-flex gap-3 fs-4">
-
-                            <a href="#">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="bi bi-twitter-x"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="bi bi-pinterest"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
+                    <p>
+                        Personalized surprise shopping designed
+                        to make every unboxing exciting.
+                    </p>
 
                 </div>
 
-                <hr>
+                <div class="col-lg-2">
 
-                <div class="text-center">
+                    <h5>Shop</h5>
 
-                    <p class="mb-0">
-                        © 2026 MysteryBox. All Rights Reserved.
-                    </p>
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a href="mystery-box.html">
+                                Explore Boxes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="build-box.html">
+                                Build Box
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cart.html">
+                                Cart
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <h5>Company</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Follow Us</h5>
+
+                    <div class="d-flex gap-3 fs-4">
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </footer>
+            <hr>
+
+            <div class="text-center">
+
+                <p class="mb-0">
+                    © 2026 MysteryBox. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,104 +1,165 @@
 /* =========================================
-   MYSTERYBOX - NAVBAR
+   MYSTERYBOX - NAVBAR (maroon)
    ========================================= */
 
-.mystery-navbar {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 0;
+.site-navbar {
+    background-color: var(--burgundy, #6b0f2a);
+    padding: 0.6rem 0;
+    border-bottom: 3px solid #f2a7bd;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--dark);
-}
-
-.navbar-brand i {
-    color: var(--dark-pink);
-    margin-right: 6px;
-}
-
-.navbar-brand:hover {
-    color: var(--dark-pink);
-}
-
-
-/* Navigation links */
-
-.mystery-navbar .nav-link {
-    color: var(--dark);
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 0 7px;
-    transition: 0.3s ease;
-}
-
-.mystery-navbar .nav-link:hover,
-.mystery-navbar .nav-link.active {
-    color: var(--dark-pink);
-}
-
-
-/* Right side icons */
-
-.nav-icons {
+/* Logo */
+.site-navbar .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 0.5rem;
+    padding: 0;
+    margin-right: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff6f0;
 }
 
-.nav-icon {
-    color: var(--dark);
-    font-size: 1.15rem;
-    transition: 0.3s ease;
+.site-navbar .navbar-brand:hover {
+    color: #fff;
 }
 
-.nav-icon:hover {
-    color: var(--dark-pink);
+.brand-text em {
+    font-style: italic;
+    font-weight: 500;
+    color: #f2a7bd;
 }
 
-
-/* Login button */
-
-.login-btn {
-    border: 1px solid var(--dark-pink);
-    color: var(--dark-pink);
-    padding: 8px 18px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: 0.3s ease;
+.brand-logo {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
 }
 
-.login-btn:hover {
-    background-color: var(--dark-pink);
-    color: var(--white);
+.site-navbar .navbar-brand:hover .brand-logo {
+    transform: rotate(-8deg) scale(1.1);
 }
 
+.logo-body   { fill: #fff6f0; }
+.logo-lid    { fill: #f2a7bd; }
+.logo-ribbon { fill: var(--burgundy, #6b0f2a); }
+.logo-bow    { fill: #f2a7bd; stroke: #fff6f0; stroke-width: 1; }
+.logo-spark  { fill: #f2a7bd; }
 
-/* Mobile */
-
-@media (max-width: 991px) {
-
-    .nav-icons {
-        margin-top: 15px;
-        justify-content: center;
-    }
-
+/* Links */
+.site-navbar .nav-link {
+    position: relative;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 246, 240, 0.85);
+    transition: color 0.2s ease;
 }
 
+.site-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #f2a7bd;
+    transition: width 0.25s ease;
+}
 
-.login-link {
-    color: var(--burgundy) !important;
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+    color: #fff;
+}
+
+.site-navbar .nav-link:hover::after,
+.site-navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* Login pill */
+.site-navbar .login-link {
+    padding: 0.4rem 1.1rem;
+    border: 1.5px solid rgba(255, 246, 240, 0.7);
+    border-radius: 999px;
+    color: #fff6f0;
+}
+
+.site-navbar .login-link::after {
+    display: none;
+}
+
+.site-navbar .login-link:hover {
+    background: #fff6f0;
+    border-color: #fff6f0;
+    color: var(--burgundy, #6b0f2a);
 }
 
 .login-link i {
-    margin-right: 5px;
-    font-size: 1rem;
+    margin-right: 4px;
 }
 
-.login-link:hover {
-    color: #70001d !important;
+/* Cart */
+.nav-cart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgba(255, 246, 240, 0.7);
+    border-radius: 50%;
+    color: #fff6f0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-cart:hover {
+    background: #fff6f0;
+    color: var(--burgundy, #6b0f2a);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #f2a7bd;
+    color: var(--burgundy, #6b0f2a);
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+}
+
+/* Mobile menu button (light icon on maroon) */
+.site-navbar .navbar-toggler {
+    border-color: rgba(255, 246, 240, 0.6);
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(242, 167, 189, 0.4);
+}
+
+.site-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+@media (max-width: 991.98px) {
+    .site-navbar .navbar-nav {
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+
+    .site-navbar .login-link {
+        align-self: flex-start;
+    }
+
+    .nav-cart {
+        margin-top: 0.4rem;
+    }
 }

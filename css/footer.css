@@ -172,7 +172,7 @@
     font-family: 'Pacifico', cursive;
     font-size: clamp(3rem, 11vw, 9rem);
     line-height: 1.25;
-    color: #fff6f0;
+    color: #ffe6d6;
     user-select: none;
 }
 
@@ -183,14 +183,14 @@
 
 .wm-text em {
     font-style: normal;
-    color: #f2a7bd;
+    color: #ffe6d6;
 }
 
 .wm-star {
     position: absolute;
     font-family: sans-serif;
     font-size: 0.22em;
-    color: #f2a7bd;
+    color: #ffe6d6;
     animation: wmTwinkle 2.4s ease-in-out infinite;
 }
 

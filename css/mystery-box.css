@@ -496,3 +496,25 @@
         transition: none;
     }
 }
+
+/* Placeholder for missing box images */
+.box-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    font-size: 4.5rem;
+}
+
+.box-placeholder-pink {
+    background: linear-gradient(135deg, #f6dde3, #ecc3cf);
+}
+
+.box-placeholder-midnight {
+    background: linear-gradient(135deg, #5a2c3f, #2b1520);
+}
+
+.box-placeholder-cozy {
+    background: linear-gradient(135deg, #f0dcc0, #e2c39a);
+}

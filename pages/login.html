@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | MysteryBox</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top py-3"
+        style="background-color: var(--cream); border-bottom:1px solid var(--border);">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-4"
+                href="../index.html"
+                style="color:var(--burgundy); font-family:'Playfair Display',serif;">
+                MysteryBox
+            </a>
+
+
+            <!-- Mobile menu button -->
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+                aria-controls="navmenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navmenu">
+
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="explore.html">
+                            Explore Boxes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="build-box.html">
+                            Build Box
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <!-- Login -->
+                    <li class="nav-item">
+                        <a href="login.html"
+                            class="nav-link fw-semibold login-link active"
+                            style="color:var(--burgundy);">
+
+                            <i class="bi bi-person"></i>
+                            Login
+
+                        </a>
+                    </li>
+
+
+                    <!-- Cart -->
+                    <li class="nav-item">
+
+                        <a href="cart.html"
+                            class="btn btn-outline-dark rounded-pill px-3 position-relative"
+                            aria-label="Cart">
+
+                            <i class="bi bi-bag"></i>
+
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                1
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         LOGIN SECTION
+    ====================================== -->
+
+    <section class="login-section">
+
+        <div class="container">
+
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-lg-5 col-md-7">
+
+                    <!-- Login Card -->
+
+                    <div class="login-card">
+
+                        <!-- Small Label -->
+
+                        <div class="login-label">
+
+                            <span></span>
+
+                            WELCOME BACK
+
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- Heading -->
+
+                        <h1>
+                            Welcome Back
+                            <span>✨</span>
+                        </h1>
+
+
+                        <p class="login-subtitle">
+                            Log in to continue your MysteryBox experience.
+                        </p>
+
+
+                        <!-- Login Form -->
+
+                        <form id="loginForm">
+
+                            <!-- Email -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Password -->
+
+                            <div class="form-group">
+
+                                <label for="password">
+                                    Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-lock"></i>
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        placeholder="Enter your password"
+                                        required>
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        onclick="togglePassword()">
+
+                                        <i class="bi bi-eye" id="eyeIcon"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Remember + Forgot -->
+
+                            <div class="login-options">
+
+                                <label class="remember-me">
+
+                                    <input type="checkbox">
+
+                                    <span>Remember me</span>
+
+                                </label>
+
+                                <a href="#">
+                                    Forgot Password?
+                                </a>
+
+                            </div>
+
+
+                            <!-- Login Button -->
+
+                            <button
+                                type="submit"
+                                class="login-button">
+
+                                Login
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <!-- Divider -->
+
+                        <div class="login-divider">
+
+                            <span>OR</span>
+
+                        </div>
+
+
+                        <!-- Create Account -->
+
+                        <p class="create-account">
+
+                            Don't have an account?
+
+                            <a href="signup.html">
+                                Create Account
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Password Toggle -->
+
+    <script>
+
+        function togglePassword() {
+
+            const password = document.getElementById("password");
+            const eyeIcon = document.getElementById("eyeIcon");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                eyeIcon.classList.remove("bi-eye");
+                eyeIcon.classList.add("bi-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                eyeIcon.classList.remove("bi-eye-slash");
+                eyeIcon.classList.add("bi-eye");
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/* =========================================
+   MYSTERYBOX - FOOTER (maroon)
+   ========================================= */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    margin-top: 5rem;
+    padding: 4rem 0 0;
+    background: var(--burgundy, #6b0f2a);
+    color: rgba(255, 246, 240, 0.8);
+    border-radius: 36px 36px 0 0;
+}
+
+/* soft pink top edge */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f2a7bd, #fff6f0, #f2a7bd);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.5fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Brand */
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff6f0;
+    text-decoration: none;
+}
+
+.footer-logo em {
+    font-style: italic;
+    font-weight: 500;
+    color: #f2a7bd;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    margin-bottom: 1.4rem;
+    line-height: 1.7;
+    color: rgba(255, 246, 240, 0.75);
+}
+
+/* Social icons */
+.footer-social {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 246, 240, 0.35);
+    border-radius: 50%;
+    font-size: 1rem;
+    color: #fff6f0;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.footer-social a:hover {
+    background: #f2a7bd;
+    border-color: #f2a7bd;
+    color: var(--burgundy, #6b0f2a);
+    transform: translateY(-4px);
+}
+
+/* Columns */
+.footer-col h5 {
+    position: relative;
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.7rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #fff6f0;
+}
+
+.footer-col h5::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: #f2a7bd;
+}
+
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-col ul a {
+    display: inline-block;
+    color: rgba(255, 246, 240, 0.8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-col ul a:hover {
+    color: #f2a7bd;
+    transform: translateX(5px);
+}
+
+/* Newsletter */
+.footer-news p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 246, 240, 0.75);
+}
+
+.footer-form {
+    display: flex;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 246, 240, 0.25);
+    border-radius: 999px;
+}
+
+.footer-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.55rem 1rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+}
+
+.footer-form input::placeholder {
+    color: rgba(255, 246, 240, 0.55);
+}
+
+.footer-form button {
+    padding: 0.55rem 1.3rem;
+    background: #f2a7bd;
+    border: 0;
+    border-radius: 999px;
+    font-weight: 700;
+    color: var(--burgundy, #6b0f2a);
+    transition: background 0.2s ease;
+}
+
+.footer-form button:hover {
+    background: #fff6f0;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid rgba(255, 246, 240, 0.15);
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 246, 240, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}

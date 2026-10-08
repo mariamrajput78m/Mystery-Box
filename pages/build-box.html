@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/build-box.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/mystery-box.css">
 </head>
 
 <body>
@@ -280,120 +282,68 @@
     </section>
 
 
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
 
-    <footer class="footer-section">
+    <!-- footer content here -->
+    <footer class="site-footer">
+    <div class="container">
 
-        <div class="container">
+        <div class="footer-top">
 
-            <div class="row gy-4">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="../index.html" class="footer-logo">
+                    <span class="brand-emoji">🎁</span>
+                    <span>Mystery<em>Box</em></span>
+                </a>
+                <p>Personalized surprise shopping designed to make every unboxing exciting.</p>
 
-                <div class="col-lg-4">
-
-                    <h3 class="footer-logo">
-                        MysteryBox
-                    </h3>
-
-                    <p>
-                        Personalized surprise shopping designed
-                        to make every unboxing exciting.
-                    </p>
-
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
                 </div>
-
-                <div class="col-lg-2">
-
-                    <h5>Shop</h5>
-
-                    <ul class="list-unstyled">
-
-                        <li>
-                            <a href="mystery-box.html">
-                                Explore Boxes
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="build-box.html">
-                                Build Box
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="cart.html">
-                                Cart
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-2">
-
-                    <h5>Company</h5>
-
-                    <ul class="list-unstyled">
-
-                        <li>
-                            <a href="about.html">
-                                About
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <h5>Follow Us</h5>
-
-                    <div class="d-flex gap-3 fs-4">
-
-                        <a href="#">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="bi bi-pinterest"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <hr>
+            <!-- Shop -->
+            <div class="footer-col">
+                <h5>Shop</h5>
+                <ul>
+                    <li><a href="explore.html">Explore Boxes</a></li>
+                    <li><a href="build-box.html">Build Box</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
 
-            <div class="text-center">
+            <!-- Company -->
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
 
-                <p class="mb-0">
-                    © 2026 MysteryBox. All Rights Reserved.
-                </p>
-
+            <!-- Newsletter -->
+            <div class="footer-col footer-news">
+                <h5>Join The Surprise</h5>
+                <p>Get first access to new vibes and special offers.</p>
+                <form class="footer-form" onsubmit="return false;">
+                    <input type="email" placeholder="Your email" aria-label="Email address">
+                    <button type="submit">Join</button>
+                </form>
             </div>
 
         </div>
 
-    </footer>
+        <div class="footer-bottom">
+            <p>© 2026 MysteryBox. All Rights Reserved.</p>
+            <p>Made with 🎀 for surprise lovers</p>
+        </div>
+
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>

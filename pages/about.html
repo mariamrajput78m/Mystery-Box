@@ -13,6 +13,10 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -347,42 +351,18 @@
     </section>
 
 
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
-    <footer class="footer-section">
+        <!-- footer content here -->
+    <footer class="site-footer">
         <div class="container">
 
-            <div class="row gy-4">
+            <div class="footer-grid">
 
-                <div class="col-lg-4">
-                    <h3 class="footer-logo">MysteryBox</h3>
-                    <p>
-                        Personalized surprise shopping designed
-                        to make every unboxing exciting.
-                    </p>
-                </div>
-
-                <div class="col-lg-2">
-                    <h5>Shop</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="mystery-box.html">Explore Boxes</a></li>
-                        <li><a href="build-box.html">Build Box</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2">
-                    <h5>Company</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4">
-                    <h5>Follow Us</h5>
-                    <div class="d-flex gap-3 fs-4">
+                <!-- About -->
+                <div class="footer-about">
+                    <span class="footer-badge">🎁</span>
+                    <p>Personalized surprise shopping for people who love a little mystery. Pick your vibe, we'll fill
+                        the box.</p>
+                    <div class="footer-social">
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
@@ -390,12 +370,60 @@
                     </div>
                 </div>
 
+                <!-- Shop -->
+                <div class="footer-col">
+                    <h6>Shop</h6>
+                    <ul>
+                        <li><a href="explore.html">Explore Boxes</a></li>
+                        <li><a href="build-box.html">Build Box</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Vibes -->
+                <div class="footer-col">
+                    <h6>Vibes</h6>
+                    <ul>
+                        <li><a href="explore.html">🎀 Pink Dream</a></li>
+                        <li><a href="explore.html">🌙 Midnight Luxe</a></li>
+                        <li><a href="explore.html">☕ Cozy Warmth</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-col footer-news">
+                    <h6>Join The Surprise</h6>
+                    <p>First access to new vibes and special offers.</p>
+                    <form class="footer-form" onsubmit="return false;">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" placeholder="Enter your email" aria-label="Email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
             </div>
 
-            <hr>
+            <!-- Giant wordmark -->
+            <div class="footer-wordmark" aria-hidden="true">
+                <span class="wm-star s1">✦</span>
+                <span class="wm-star s2">✧</span>
+                <span class="wm-star s3">✦</span>
+                <span class="wm-emoji">🎁</span>
+                <span class="wm-text">Mystery<em>Box</em></span>
+            </div>
 
-            <div class="text-center">
-                <p class="mb-0">© 2026 MysteryBox. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>© 2026 MysteryBox. All rights reserved. Made with 🎀</p>
             </div>
 
         </div>

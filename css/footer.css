@@ -1,5 +1,5 @@
 /* =========================================
-   MYSTERYBOX - FOOTER (maroon)
+   MYSTERYBOX - FOOTER (maroon + cute)
    ========================================= */
 
 .site-footer {
@@ -12,7 +12,6 @@
     border-radius: 36px 36px 0 0;
 }
 
-/* soft pink top edge */
 .site-footer::before {
     content: "";
     position: absolute;
@@ -23,54 +22,49 @@
     background: linear-gradient(90deg, #f2a7bd, #fff6f0, #f2a7bd);
 }
 
-.footer-top {
+/* Top grid */
+.footer-grid {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr 0.8fr 1.6fr;
     gap: 2.5rem;
     padding-bottom: 3rem;
 }
 
-/* Brand */
-.footer-logo {
+.footer-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
     margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #fff6f0;
-    text-decoration: none;
+    font-size: 1.4rem;
+    background: #fff6f0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(242, 167, 189, 0.4);
 }
 
-.footer-logo em {
-    font-style: italic;
-    font-weight: 500;
-    color: #f2a7bd;
-}
-
-.footer-brand p {
-    max-width: 300px;
-    margin-bottom: 1.4rem;
+.footer-about p {
+    max-width: 280px;
+    margin-bottom: 1.3rem;
+    font-size: 0.92rem;
     line-height: 1.7;
     color: rgba(255, 246, 240, 0.75);
 }
 
-/* Social icons */
+/* Social */
 .footer-social {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.6rem;
 }
 
 .footer-social a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border: 1px solid rgba(255, 246, 240, 0.35);
     border-radius: 50%;
-    font-size: 1rem;
     color: #fff6f0;
     text-decoration: none;
     transition: all 0.25s ease;
@@ -84,23 +78,13 @@
 }
 
 /* Columns */
-.footer-col h5 {
-    position: relative;
-    margin-bottom: 1.4rem;
-    padding-bottom: 0.7rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    color: #fff6f0;
-}
-
-.footer-col h5::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 30px;
-    height: 2px;
-    background: #f2a7bd;
+.footer-col h6 {
+    margin-bottom: 1.3rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f2a7bd;
 }
 
 .footer-col ul {
@@ -110,12 +94,13 @@
 }
 
 .footer-col li {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-col ul a {
     display: inline-block;
-    color: rgba(255, 246, 240, 0.8);
+    font-size: 0.95rem;
+    color: #fff6f0;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -128,26 +113,32 @@
 /* Newsletter */
 .footer-news p {
     margin-bottom: 1rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
     color: rgba(255, 246, 240, 0.75);
 }
 
 .footer-form {
     display: flex;
-    padding: 4px;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 4px 4px 4px 14px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 246, 240, 0.25);
     border-radius: 999px;
 }
 
+.footer-form i {
+    color: rgba(255, 246, 240, 0.6);
+}
+
 .footer-form input {
     flex: 1;
     min-width: 0;
-    padding: 0.55rem 1rem;
+    padding: 0.55rem 0.4rem;
     background: transparent;
     border: 0;
     outline: none;
+    font-size: 0.9rem;
     color: #fff;
 }
 
@@ -156,10 +147,11 @@
 }
 
 .footer-form button {
-    padding: 0.55rem 1.3rem;
+    padding: 0.55rem 1.2rem;
     background: #f2a7bd;
     border: 0;
     border-radius: 999px;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--burgundy, #6b0f2a);
     transition: background 0.2s ease;
@@ -169,36 +161,81 @@
     background: #fff6f0;
 }
 
+/* Giant wordmark */
+.footer-wordmark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15em;
+    padding: 1rem 0 1.5rem;
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(3rem, 11vw, 9rem);
+    line-height: 1.25;
+    color: #fff6f0;
+    user-select: none;
+}
+
+.wm-emoji {
+    font-size: 0.8em;
+    animation: wmFloat 3s ease-in-out infinite;
+}
+
+.wm-text em {
+    font-style: normal;
+    color: #f2a7bd;
+}
+
+.wm-star {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 0.22em;
+    color: #f2a7bd;
+    animation: wmTwinkle 2.4s ease-in-out infinite;
+}
+
+.wm-star.s1 { top: 8%;  left: 8%; }
+.wm-star.s2 { top: 18%; right: 9%; animation-delay: 0.8s; }
+.wm-star.s3 { bottom: 14%; right: 24%; animation-delay: 1.5s; }
+
+@keyframes wmFloat {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50%      { transform: translateY(-8px) rotate(6deg); }
+}
+
+@keyframes wmTwinkle {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50%      { opacity: 1;   transform: scale(1.2); }
+}
+
 /* Bottom bar */
 .footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5rem;
     padding: 1.4rem 0;
     border-top: 1px solid rgba(255, 246, 240, 0.15);
-    font-size: 0.9rem;
+    text-align: center;
 }
 
 .footer-bottom p {
     margin: 0;
+    font-size: 0.9rem;
     color: rgba(255, 246, 240, 0.65);
 }
 
 /* Responsive */
 @media (max-width: 991.98px) {
-    .footer-top {
+    .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-about,
+    .footer-news {
+        grid-column: 1 / -1;
     }
 }
 
 @media (max-width: 575.98px) {
-    .footer-top {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        justify-content: center;
-        text-align: center;
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1.5rem;
     }
 }

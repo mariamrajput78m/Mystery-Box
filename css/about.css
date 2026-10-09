@@ -399,3 +399,218 @@
     line-height: 1.9;
     margin-bottom: 1.2rem;
 }
+
+
+/* ---------- Hero: scrapbook tilt ---------- */
+.about-hero .row > div img {
+    --tilt: 0deg;
+    transform: rotate(var(--tilt));
+    border: 6px solid #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+}
+
+.about-hero .row > div:nth-child(1) img { --tilt: -2.5deg; }
+.about-hero .row > div:nth-child(2) img { --tilt: 1.5deg; }
+.about-hero .row > div:nth-child(3) img { --tilt: -1.5deg; }
+.about-hero .row > div:nth-child(4) img { --tilt: 2.5deg; }
+
+.about-hero .row > div img:hover {
+    transform: rotate(0deg) translateY(-6px);
+}
+
+@media (min-width: 768px) {
+    .about-hero .row > div:nth-child(even) { margin-top: 36px; }
+}
+
+
+/* ---------- Ticker ---------- */
+.vibe-ticker {
+    background: var(--burgundy);
+    color: #fff;
+    overflow: hidden;
+    padding: 16px 0;
+    white-space: nowrap;
+}
+
+.ticker-track {
+    display: inline-flex;
+    animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ticker-group span {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    padding: 0 22px;
+}
+
+.ticker-group .tick-star {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0;
+    opacity: .7;
+}
+
+@keyframes ticker-scroll {
+    to { transform: translateX(-50%); }
+}
+
+
+/* ---------- Vibes ---------- */
+.vibes-section { background: var(--cream); }
+
+.vibe-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    height: 100%;
+    padding: 34px 30px;
+    border-radius: 28px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.vibe-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .35), transparent 60%);
+    pointer-events: none;
+}
+
+.vibe-card > * { position: relative; z-index: 1; }
+
+.vibe-card .vibe-emoji {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.vibe-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.vibe-card p {
+    margin-bottom: 18px;
+    opacity: .95;
+}
+
+.vibe-link {
+    align-self: flex-start;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 9px 20px;
+    border: 1.5px solid rgba(255, 255, 255, .8);
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.vibe-link:hover {
+    background: #fff;
+    color: var(--burgundy);
+}
+
+.vibe-pink     { background: linear-gradient(155deg, #f2a3bd, #c2456e); }
+.vibe-midnight { background: linear-gradient(155deg, #3a2c5c, #120e22); }
+.vibe-cozy     { background: linear-gradient(155deg, #d6a06a, #8a4b2a); }
+
+
+/* ---------- Founder note ---------- */
+.founder-note { background: var(--ivory); }
+
+.founder-wrap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 45px;
+
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .06);
+}
+
+.founder-photo {
+    flex: 0 0 240px;
+    position: relative;
+}
+
+.founder-photo::before {
+    content: "";
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    border: 2px solid var(--burgundy);
+    border-radius: 120px 120px 24px 24px;
+}
+
+.founder-photo img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 120px 120px 24px 24px;
+}
+
+.founder-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--dark);
+    margin-bottom: 24px;
+}
+
+.founder-quote::before {
+    content: "\201C";
+    display: block;
+    font-size: 4.5rem;
+    line-height: .6;
+    color: var(--burgundy);
+    margin-bottom: 8px;
+}
+
+.founder-sign {
+    display: block;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: var(--burgundy);
+}
+
+.founder-role {
+    display: block;
+    color: #777;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .founder-wrap {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+        gap: 40px;
+    }
+    .founder-photo { flex-basis: auto; width: 200px; }
+    .founder-photo img { height: 250px; }
+    .founder-quote { font-size: 1.35rem; }
+}
+
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | MysteryBox</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html" aria-label="MysteryBox home">
+                <span class="brand-emoji">🎁</span>
+                <span class="brand-text">Mystery<em>Box</em></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="build-box.html">Build Box</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link login-link"><i class="bi bi-person"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-cart position-relative active" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge" id="cartBadgeCount">2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- =====================================
+         CART SECTION
+    ====================================== -->
+
+    <section class="cart-section">
+
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="cart-header mb-4">
+                <div class="cart-label">
+                    <span></span> YOUR SELECTIONS <span></span>
+                </div>
+                <h1>Shopping Cart 🛍️</h1>
+                <p class="text-muted">Review your items before unlocking your mystery package.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Left Column: Cart Items -->
+                <div class="col-lg-8">
+
+                    <div class="cart-items-card">
+
+                        <!-- Item 1 -->
+                        <div class="cart-item" data-price="49.99">
+                            <div class="cart-item-img">
+                                <span class="item-emoji">🎀</span>
+                            </div>
+
+                            <div class="cart-item-info">
+                                <h5>Pink Dream Box</h5>
+                                <p class="item-meta">Vibe: Soft & Aesthetic | Size: Medium</p>
+                                <span class="item-price">$49.99</span>
+                            </div>
+
+                            <div class="cart-item-actions">
+                                <div class="quantity-control">
+                                    <button class="btn-qty btn-minus" onclick="updateQty(this, -1)">-</button>
+                                    <span class="qty-val">1</span>
+                                    <button class="btn-qty btn-plus" onclick="updateQty(this, 1)">+</button>
+                                </div>
+                                <button class="btn-remove" onclick="removeItem(this)" title="Remove item">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="cart-item" data-price="69.99">
+                            <div class="cart-item-img luxury-bg">
+                                <span class="item-emoji">🌙</span>
+                            </div>
+
+                            <div class="cart-item-info">
+                                <h5>Midnight Luxe Box</h5>
+                                <p class="item-meta">Vibe: Elegant & Mysterious | Size: Deluxe</p>
+                                <span class="item-price">$69.99</span>
+                            </div>
+
+                            <div class="cart-item-actions">
+                                <div class="quantity-control">
+                                    <button class="btn-qty btn-minus" onclick="updateQty(this, -1)">-</button>
+                                    <span class="qty-val">1</span>
+                                    <button class="btn-qty btn-plus" onclick="updateQty(this, 1)">+</button>
+                                </div>
+                                <button class="btn-remove" onclick="removeItem(this)" title="Remove item">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Back to Shop Link -->
+                        <div class="cart-actions-footer mt-4">
+                            <a href="explore.html" class="back-link">
+                                <i class="bi bi-arrow-left"></i> Continue Shopping
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="col-lg-4">
+
+                    <div class="summary-card">
+
+                        <h3 class="summary-title">Order Summary</h3>
+
+                        <!-- Promo Code Input -->
+                        <div class="promo-box mb-4">
+                            <label for="promoCode">Promo Code</label>
+                            <div class="input-group mt-1">
+                                <input type="text" id="promoCode" class="form-control" placeholder="MYSTERY10">
+                                <button class="btn btn-apply" onclick="applyPromo()">Apply</button>
+                            </div>
+                            <span class="promo-msg text-success d-none" id="promoMsg">10% discount applied! ✨</span>
+                        </div>
+
+                        <!-- Price Breakdown -->
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="summarySubtotal">$119.98</span>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Estimated Shipping</span>
+                            <span id="summaryShipping" class="text-success">FREE</span>
+                        </div>
+
+                        <div class="summary-line" id="discountRow" style="display: none;">
+                            <span>Discount</span>
+                            <span id="summaryDiscount" class="text-danger">-$12.00</span>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Estimated Tax</span>
+                            <span id="summaryTax">$6.00</span>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="summary-line total-line">
+                            <span>Total</span>
+                            <span id="summaryTotal">$125.98</span>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <button class="checkout-button mt-4">
+                            Proceed to Checkout <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                        <!-- Trust Badges -->
+                        <div class="trust-badges mt-4">
+                            <div class="badge-item">
+                                <i class="bi bi-truck"></i>
+                                <span>Free shipping over $50</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>100% Secure Checkout</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- About -->
+                <div class="footer-about">
+                    <span class="footer-badge">🎁</span>
+                    <p>Personalized surprise shopping for people who love a little mystery. Pick your vibe, we'll fill
+                        the box.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div class="footer-col">
+                    <h6>Shop</h6>
+                    <ul>
+                        <li><a href="explore.html">Explore Boxes</a></li>
+                        <li><a href="build-box.html">Build Box</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Vibes -->
+                <div class="footer-col">
+                    <h6>Vibes</h6>
+                    <ul>
+                        <li><a href="explore.html">🎀 Pink Dream</a></li>
+                        <li><a href="explore.

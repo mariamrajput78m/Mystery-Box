@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | MysteryBox</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html" aria-label="MysteryBox home">
+                <span class="brand-emoji">🎁</span>
+                <span class="brand-text">Mystery<em>Box</em></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="build-box.html">Build Box</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link login-link active"><i class="bi bi-person"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-cart position-relative" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- =====================================
+         SIGNUP SECTION
+    ====================================== -->
+
+    <section class="login-section">
+
+        <div class="container">
+
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-lg-5 col-md-7">
+
+                    <!-- Signup Card -->
+
+                    <div class="login-card">
+
+                        <!-- Small Label -->
+
+                        <div class="login-label">
+
+                            <span></span>
+
+                            JOIN THE MYSTERY
+
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- Heading -->
+
+                        <h1>
+                            Create Account
+                            <span>✨</span>
+                        </h1>
+
+
+                        <p class="login-subtitle">
+                            Sign up to start unboxing customized surprise boxes and exclusive perks.
+                        </p>
+
+
+                        <!-- Signup Form -->
+
+                        <form id="signupForm">
+
+                            <!-- Full Name -->
+
+                            <div class="form-group mb-3">
+
+                                <label for="fullname">
+                                    Full Name
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="form-group mb-3">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Password -->
+
+                            <div class="form-group mb-3">
+
+                                <label for="password">
+                                    Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-lock"></i>
+
+                                    <input type="password" id="password" placeholder="Create a password" required>
+
+                                    <button type="button" class="password-toggle" onclick="togglePassword('password', 'eyeIcon1')">
+
+                                        <i class="bi bi-eye" id="eyeIcon1"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Confirm Password -->
+
+                            <div class="form-group mb-3">
+
+                                <label for="confirmPassword">
+                                    Confirm Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-shield-lock"></i>
+
+                                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+                                    <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword', 'eyeIcon2')">
+
+                                        <i class="bi bi-eye" id="eyeIcon2"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Terms & Conditions -->
+
+                            <div class="login-options mb-3">
+
+                                <label class="remember-me">
+
+                                    <input type="checkbox" required>
+
+                                    <span>I agree to the <a href="#">Terms & Conditions</a></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <!-- Signup Button -->
+
+                            <button type="submit" class="login-button">
+
+                                Create Account
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <!-- Divider -->
+
+                        <div class="login-divider">
+
+                            <span>OR</span>
+
+                        </div>
+
+
+                        <!-- Link to Login Page -->
+
+                        <p class="create-account">
+
+                            Already have an account?
+
+                            <a href="login.html">
+                                Log In
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- About -->
+                <div class="footer-about">
+                    <span class="footer-badge">🎁</span>
+                    <p>Personalized surprise shopping for people who love a little mystery. Pick your vibe, we'll fill
+                        the box.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div class="footer-col">
+                    <h6>Shop</h6>
+                    <ul>
+                        <li><a href="explore.html">Explore Boxes</a></li>
+                        <li><a href="build-box.html">Build Box</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Vibes -->
+                <div class="footer-col">
+                    <h6>Vibes</h6>
+                    <ul>
+                        <li><a href="explore.html">🎀 Pink Dream</a></li>
+                        <li><a href="explore.html">🌙 Midnight Luxe</a></li>
+                        <li><a href="explore.html">☕ Cozy Warmth</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-col footer-news">
+                    <h6>Join The Surprise</h6>
+                    <p>First access to new vibes and special offers.</p>
+                    <form class="footer-form" onsubmit="return false;">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" placeholder="Enter your email" aria-label="Email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Giant wordmark -->
+            <div class="footer-wordmark" aria-hidden="true">
+                <span class="wm-star s1">✦</span>
+                <span class="wm-star s2">✧</span>
+                <span class="wm-star s3">✦</span>
+                <span class="wm-emoji">🎁</span>
+                <span class="wm-text">Mystery<em>Box</em></span>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 MysteryBox. All rights reserved. Made with 🎀</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Password Toggle JS -->
+    <script>
+        function togglePassword(inputId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const eyeIcon = document.getElementById(iconId);
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("bi-eye");
+                eyeIcon.classList.add("bi-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("bi-eye-slash");
+                eyeIcon.classList.add("bi-eye");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,8 +1,6 @@
 /* =====================================
-   MYSTERY BOX / EXPLORE PAGE
-   Uses your existing variables from style.css:
-   --burgundy, --cream, --ivory, --dark, --border
-   (fallbacks below match your homepage colours)
+   EXPLORE PAGE
+   Uses --burgundy, --cream, --ivory, --dark, --border from style.css
 ===================================== */
 
 :root {
@@ -50,55 +48,76 @@
 ===================================== */
 
 .filter-bar {
-    background: var(--mb-ivory);
-    border-top: 1px solid var(--mb-border);
-    border-bottom: 1px solid var(--mb-border);
-    padding: 16px 0;
     position: sticky;
-    top: 74px;               /* sits under the sticky navbar */
+    top: 74px;                              /* sits under the sticky navbar */
     z-index: 100;
+    padding: 18px 0 24px;
+    background: linear-gradient(
+        to bottom,
+        var(--mb-cream) 70%,
+        color-mix(in srgb, var(--mb-cream) 0%, transparent)
+    );
 }
 
 .filter-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
+
+    background: #fbf3e5;
+    border: 1px solid #e8d8bd;
+    border-radius: 60px;
+    padding: 8px 10px 8px 8px;
+    box-shadow: 0 10px 28px rgba(122, 65, 34, .10);
 }
 
 .filter-pills {
     display: flex;
-    gap: 10px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
+/* Pills: each has a resting tint (--tint) and text colour (--ink) */
 .filter-pill {
-    background: #fff;
-    color: var(--mb-dark);
-    border: 1px solid var(--mb-border);
+    background: var(--tint, transparent);
+    color: var(--ink, var(--mb-dark));
+    border: 0;
     border-radius: 50px;
-    padding: 9px 20px;
+    padding: 11px 22px;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: background .2s, color .2s, border-color .2s;
+    transition: filter .25s, box-shadow .25s;
 }
+
+.filter-pill[data-filter="all"]      { --tint: #f1e2c8; --ink: #4a2a1a; }
+.filter-pill[data-filter="pink"]     { --tint: #fbe3ea; --ink: #9b2b55; }
+.filter-pill[data-filter="midnight"] { --tint: #e7e2f3; --ink: #2b2140; }
+.filter-pill[data-filter="cozy"]     { --tint: #f4e1c9; --ink: #7a4122; }
 
 .filter-pill:hover {
-    border-color: var(--mb-burgundy);
+    filter: brightness(.96);
 }
 
+/* Selected: full colour, white text */
 .filter-pill.active {
     background: var(--mb-burgundy);
-    border-color: var(--mb-burgundy);
     color: #fff;
+    box-shadow: 0 6px 16px rgba(107, 0, 32, .25);
 }
 
+.filter-pill[data-filter="pink"].active     { background: linear-gradient(155deg, #d9709a, #b83a63); }
+.filter-pill[data-filter="midnight"].active { background: linear-gradient(155deg, #3a2c5c, #120e22); }
+.filter-pill[data-filter="cozy"].active     { background: linear-gradient(155deg, #c98f58, #8a4b2a); }
+
+/* Sort */
 .sort-wrap {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-right: 4px;
 }
 
 .sort-label {
@@ -107,23 +126,28 @@
 }
 
 .sort-select {
-    background: #fff;
-    border: 1px solid var(--mb-border);
+    -webkit-appearance: none;
+    appearance: none;
+    background: #f1e2c8
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b0020' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        no-repeat right 18px center / 12px;
+    border: 0;
     border-radius: 50px;
-    padding: 9px 18px;
+    padding: 11px 44px 11px 22px;
     font-weight: 600;
     font-size: 0.95rem;
     color: var(--mb-dark);
     cursor: pointer;
 }
 
+/* Keyboard focus (all interactive elements on this page) */
 .filter-pill:focus-visible,
 .sort-select:focus-visible,
 .btn-box-outline:focus-visible,
 .btn-box-solid:focus-visible,
 .btn-cta-light:focus-visible {
-    outline: 3px solid var(--mb-burgundy);
-    outline-offset: 2px;
+    outline: 2px solid var(--mb-burgundy);
+    outline-offset: 3px;
 }
 
 
@@ -158,12 +182,11 @@
     box-shadow: 0 18px 38px rgba(107, 0, 32, .12);
 }
 
-/* Image area: fixed ratio so every card lines up */
 .box-media {
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: linear-gradient(135deg, #f3dfe3, var(--mb-cream));   /* shows if an image is missing */
+    background: linear-gradient(135deg, #f3dfe3, var(--mb-cream));
 }
 
 .box-media img {
@@ -247,10 +270,8 @@
     margin-right: 4px;
 }
 
-.box-meta li:last-child {
-    color: #198754;          /* same green as "value" on Build Box */
-}
-
+/* "value" line is green */
+.box-meta li:last-child,
 .box-meta li:last-child i {
     color: #198754;
 }
@@ -321,6 +342,20 @@
     color: var(--mb-burgundy);
     font-weight: 600;
 }
+
+/* Fallback shown by JS when a box image fails to load */
+.box-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    font-size: 4.5rem;
+}
+
+.box-placeholder-pink     { background: linear-gradient(135deg, #f6dde3, #ecc3cf); }
+.box-placeholder-midnight { background: linear-gradient(135deg, #5a2c3f, #2b1520); }
+.box-placeholder-cozy     { background: linear-gradient(135deg, #f0dcc0, #e2c39a); }
 
 
 /* =====================================
@@ -442,6 +477,13 @@
 
     .filter-bar {
         position: static;
+        background: none;
+        padding: 0 0 10px;
+    }
+
+    .filter-inner {
+        border-radius: 28px;
+        padding: 10px;
     }
 
     .filter-pills {
@@ -449,28 +491,21 @@
         overflow-x: auto;
         width: 100%;
         padding-bottom: 4px;
+        scrollbar-width: none;
     }
 
     .filter-pill {
+        flex: 0 0 auto;
         white-space: nowrap;
     }
 
     .sort-wrap {
         width: 100%;
+        padding: 0 4px 4px;
     }
 
     .sort-select {
         flex: 1;
-    }
-
-    .cta-panel {
-        padding: 36px 26px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .cta-panel h2 {
-        font-size: 1.9rem;
     }
 
     .box-footer {
@@ -486,35 +521,29 @@
         flex: 1;
         text-align: center;
     }
+
+    .cta-panel {
+        padding: 36px 26px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cta-panel h2 {
+        font-size: 1.9rem;
+    }
 }
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
 
 @media (prefers-reduced-motion: reduce) {
     .box-card,
     .box-media img,
     .btn-box-solid,
-    .btn-cta-light {
+    .btn-cta-light,
+    .filter-pill {
         transition: none;
     }
-}
-
-/* Placeholder for missing box images */
-.box-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    font-size: 4.5rem;
-}
-
-.box-placeholder-pink {
-    background: linear-gradient(135deg, #f6dde3, #ecc3cf);
-}
-
-.box-placeholder-midnight {
-    background: linear-gradient(135deg, #5a2c3f, #2b1520);
-}
-
-.box-placeholder-cozy {
-    background: linear-gradient(135deg, #f0dcc0, #e2c39a);
 }

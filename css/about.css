@@ -614,3 +614,17 @@
 @media (prefers-reduced-motion: reduce) {
     .ticker-track { animation: none; }
 }
+
+.founder-monogram {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 120px 120px 24px 24px;
+    background: linear-gradient(155deg, #920031, #640021);
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-size: 7rem;
+}
